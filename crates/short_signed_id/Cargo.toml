@@ -1,0 +1,12 @@
+[package]
+name = "short_signed_id"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+rand.workspace = true
+rand_core.workspace = true
+anyhow.workspace = true
+sha2 = "0.10.9"
+base64 = "0.22.1"
+hmac = "0.12.1"
