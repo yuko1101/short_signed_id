@@ -10,6 +10,7 @@
   };
 
   outputs = {
+    self,
     nixpkgs,
     flake-utils,
     rust-overlay,
@@ -73,5 +74,8 @@
 
         packages.default = server-app;
       }
-    );
+    )
+    // {
+      nixosModules.default = import ./module.nix self;
+    };
 }
