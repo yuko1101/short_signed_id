@@ -33,7 +33,7 @@ in {
       lib.nameValuePair "short-signed-id-${name}" {
         wantedBy = ["multi-user.target"];
         serviceConfig = {
-          ExecStart = "${self.packages.${pkgs.stdenv.hostPlatform.system}.default}/bin/short_signed_id --bind ${instance.bind} --key-file ${instance.keyFile}";
+          ExecStart = "${self.packages.${pkgs.stdenv.hostPlatform.system}.default}/bin/server_app --bind ${instance.bind} --key-file ${instance.keyFile}";
           Restart = "always";
           RestartSec = 3;
           User = instance.user;
